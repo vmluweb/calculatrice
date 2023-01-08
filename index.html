@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="calculatrice.js" defer></script>
+</head>
+
+<body>
+    <form class="calculatrice" name="calculatrice">
+        <input class="affichage" type="text" name="affiche" />
+        <div class="clavier">
+            <button class="btn" type="reset" id="supprimer">C</button>
+            <input type="button" value="/" class="btn operateur" onclick="afficher('/')" />
+            <input class=" btn operateur" type="button" onclick="afficher('%')" value="%" />
+            <input class="btn chiffre" type="button" onclick="afficher('1')" value="1" />
+            <input class="btn chiffre" type="button" onclick="afficher('2')" value="2" />
+            <input class="btn chiffre" type="button" onclick="afficher('3')" value="3" />
+            <input class="btn operateur" type="button" onclick="afficher('*')" value="*" />
+            <input class="btn chiffre" type="button" onclick="afficher('4')" value="4" />
+            <input class="btn chiffre" type="button" onclick="afficher('5')" value="5" />
+            <input class="btn chiffre" type="button" onclick="afficher('6')" value="6" />
+            <input class="btn operateur" type="button" onclick="afficher('+')" value="+" />
+            <input class="btn chiffre" type="button" onclick="afficher('7')" value="7" />
+            <input class="btn chiffre" type="button" onclick="afficher('8')" value="8" />
+            <input class="btn chiffre" type="button" onclick="afficher('9')" value="9" />
+            <input class="btn operateur" type="button" onclick="afficher('-')" value="-" />
+            <input class="btn chiffre" type="button" onclick="afficher('0')" value="0" />
+            <input class="btn operateur decimalbtn" type="button" id="decimal" onclick="afficher('.')" value="." />
+            <input class="btn egal" type="submit" id="egal" value="=" onclick="return calculer()" />
+        </div>
+    </form>
+</body>
+
+</html>
