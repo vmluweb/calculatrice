@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::root {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    red,
+    rgb(138, 132, 122),
+    rgb(165, 165, 10)
+  );
+  height: 100vh;
+}
+
+.calculatrice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  width: 365px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 0 10px black;
+  /* position: fixed; */
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  padding-top: 30px;
+  margin-top: 70px;
+}
+
+.affichage {
+  height: 107px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 15px;
+  align-content: center;
+  /* margin-top: 30px; */
+  text-align: right;
+  color: #fff;
+  font-size: 20px;
+  overflow: hidden;
+  border: none;
+}
+
+.clavier {
+  width: 282px;
+  height: 370px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px black;
+}
+
+.clavier .btn {
+  height: 100%;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgb(243, 230, 49);
+}
+
+#supprimer,
+#egal {
+  grid-column: span 2;
+  overflow: hidden;
+}
+.btn:hover {
+  background-image: radial-gradient(
+    /* to right, */ rgb(251, 255, 0),
+    rgb(223, 195, 37),
+    rgb(241, 198, 56)
+  );
+}
+.btn:active {
+  box-shadow: 0px 0px 0px rgb(243, 230, 49);
+  transform: translateY(3px);
+}
